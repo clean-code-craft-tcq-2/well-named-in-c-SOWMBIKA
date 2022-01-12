@@ -5,11 +5,11 @@
 
 
 int main() {
-    testNumberToPair(4, WHITE, BROWN);
-    testNumberToPair(5, WHITE, SLATE);
+    testNumberToColorPairMapping(4, WHITE, BROWN);
+    testNumberToColorPairMapping(5, WHITE, SLATE);
 
-    testPairToNumber(BLACK, ORANGE, 12);
-    testPairToNumber(VIOLET, SLATE, 25);
+    testColorPairToNumberMapping(BLACK, ORANGE, 12);
+    testColorPairToNumberMapping(VIOLET, SLATE, 25);
 
     PrintColorCodeManual();
     

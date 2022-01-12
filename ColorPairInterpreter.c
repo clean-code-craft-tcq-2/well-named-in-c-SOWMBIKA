@@ -3,14 +3,14 @@
 #include "ColorCodeManual.h"
 #include "ColorPairInterpreter.h"
 
-void ColorPairToString(const ColorPair* colorPair, char* buffer) {
+void ColorPairToString(const ColorPair_s* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
-        MajorColorNames[colorPair->majorColor],
-        MinorColorNames[colorPair->minorColor]);
+        MajorColorNames_str[colorPair->majorColor],
+        MinorColorNames_str[colorPair->minorColor]);
 }
 
-ColorPair GetColorFromPairNumber(int pairNumber) {
-    ColorPair colorPair;
+ColorPair_s GetColorFromPairNumber(int pairNumber) {
+    ColorPair_s colorPair;
     int zeroBasedPairNumber = pairNumber - 1;
     colorPair.majorColor = 
         (enum MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
@@ -19,7 +19,7 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
     return colorPair;
 }
 
-int GetPairNumberFromColor(const ColorPair* colorPair) {
+int GetPairNumberFromColor(const ColorPair_s* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }

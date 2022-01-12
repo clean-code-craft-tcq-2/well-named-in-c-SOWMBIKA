@@ -1,3 +1,3 @@
-void ColorPairToString(const ColorPair* colorPair, char* buffer);
-ColorPair GetColorFromPairNumber(int pairNumber);
-int GetPairNumberFromColor(const ColorPair* colorPair);
+void ColorPairToString(const ColorPair_s* colorPair, char* buffer);
+ColorPair_s GetColorFromPairNumber(int pairNumber);
+int GetPairNumberFromColor(const ColorPair_s* colorPair);

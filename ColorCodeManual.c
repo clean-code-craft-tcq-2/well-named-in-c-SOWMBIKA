@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "ColorCodeManual.h"
 
-const char* MajorColorNames[] = { "White", "Red", "Black", "Yellow", "Violet" };
-const char* MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
+const char* MajorColorNames_str[] = { "White", "Red", "Black", "Yellow", "Violet" };
+const char* MinorColorNames_str[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
 
-int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+int numberOfMajorColors = sizeof(MajorColorNames_str) / sizeof(MajorColorNames_str[0]);
+int numberOfMinorColors = sizeof(MinorColorNames_str) / sizeof(MinorColorNames_str[0]);
 
-void PrintColorCodeManual()
+void PrintColorCodeManual(void)
 {
 	int MajorColorIndex = 0, MinorColorIndex = 0, PairNumber = 0;
 	printf("\n---------------------------------------------\n");
@@ -19,7 +19,7 @@ void PrintColorCodeManual()
 	{
 		for (MinorColorIndex = 0; MinorColorIndex < numberOfMinorColors; MinorColorIndex++)
 		{
-			printf("%d\t\t%s\t\t%s\n", ++PairNumber, MajorColorNames[MajorColorIndex], MinorColorNames[MinorColorIndex]);
+			printf("%d\t\t%s\t\t%s\n", ++PairNumber, MajorColorNames_str[MajorColorIndex], MinorColorNames_str[MinorColorIndex]);
 		}
 	}
 	printf("---------------------------------------------\n");
