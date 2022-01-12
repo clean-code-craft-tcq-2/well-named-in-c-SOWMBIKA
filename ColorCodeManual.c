@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "ColorPairManual.h"
+#include "ColorCodeManual.h"
 
 const char* MajorColorNames[] = { "White", "Red", "Black", "Yellow", "Violet" };
 const char* MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
